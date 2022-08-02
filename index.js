@@ -1,7 +1,7 @@
 const express = require('express')
 const app = express()
 const port = 3000
-app.set('views', './template/views')
+app.set('views', './templates/views')
 app.set('view engine', 'ejs')
 app.listen(port, () => {
     console.log(`Express application started at port: ${3000}`)
@@ -13,7 +13,7 @@ app.use((req, res, next) => {
 })
 
 app.get('/', (req, res) => {
-    res.send('hello world')
+    res.render('home')
 })
 
 app.get('/pineapple', (req, res) => {
